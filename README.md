@@ -1,422 +1,259 @@
-\# Network Monitoring Dashboard
+Network Monitoring Dashboard
+A real-time, enterprise-grade network monitoring system that tracks system performance, network statistics, and active connections with a 60-second historical data buffer.
 
+https://img.shields.io/badge/python-3.7%252B-blue
+https://img.shields.io/badge/platform-windows%2520%257C%2520macos%2520%257C%2520linux-lightgrey
+https://img.shields.io/badge/license-MIT-green
 
+📋 Overview
+This powerful monitoring tool provides comprehensive visibility into your system's network activity and resource utilization. Designed for both system administrators and security professionals, it delivers real-time insights with minimal overhead.
 
-A real-time enterprise-grade network monitoring system that tracks system performance, network statistics, and active connections.
+✨ Key Features
+Network Monitoring
+Traffic Analysis: Track bytes sent/received in real-time
 
+Packet Statistics: Monitor packet counts and error rates
 
+Interface Management: View all network interfaces with status, MTU, and speed
 
-\## Features
+System Performance
+CPU Monitoring: Real-time usage percentage tracking
 
+Memory Analytics: Usage, availability, and utilization rates
 
+Process Management: Top processes by thread count and resource consumption
 
-✅ \*\*Real-Time Network Monitoring\*\*
+Connection Tracking
+Active Connections: Real-time display of established connections
 
-\- Track bytes sent/received
+Address Resolution: Local and remote endpoint tracking
 
-\- Monitor packet statistics
+Connection States: Monitor connection status and transitions
 
-\- Detect network errors
+Data Persistence
+Historical Buffer: Maintains 60 seconds of time-series data
 
+Trend Analysis: Track metrics over time for pattern identification
 
+Rolling Updates: Continuous data collection with efficient memory usage
 
-✅ \*\*System Performance Tracking\*\*
+🚀 Quick Start
+Prerequisites
+Python 3.7 or higher
 
-\- CPU usage percentage
+pip package manager
 
-\- Memory usage and availability
-
-\- System resource monitoring
-
-
-
-✅ \*\*Active Connections Display\*\*
-
-\- Real-time connection status
-
-\- Local and remote address tracking
-
-\- Connection state monitoring
-
-
-
-✅ \*\*Network Interface Management\*\*
-
-\- Monitor all network interfaces
-
-\- Track interface status (UP/DOWN)
-
-\- Display MTU and speed information
-
-
-
-✅ \*\*Process Monitoring\*\*
-
-\- Track top running processes
-
-\- Thread count monitoring
-
-\- Resource usage analysis
-
-
-
-✅ \*\*Historical Data\*\*
-
-\- Maintains 60-second history buffer
-
-\- Time-series data collection
-
-\- Trend analysis capabilities
-
-
-
-\## Requirements
-
-
-
-\- Python 3.7+
-
-\- psutil library
-
-
-
-\## Installation
-
-
-
-1\. \*\*Clone the repository\*\*
-
-```bash
-
+One-Minute Setup
+bash
+# Clone the repository
 git clone https://github.com/WangilaWakhongola/network-monitoring-dashboard.git
-
 cd network-monitoring-dashboard
 
-```
-
-
-
-2\. \*\*Create a virtual environment (optional but recommended)\*\*
-
-```bash
-
-python -m venv venv
-
-
-
-\# On Windows:
-
-venv\\Scripts\\activate
-
-
-
-\# On macOS/Linux:
-
-source venv/bin/activate
-
-```
-
-
-
-3\. \*\*Install dependencies\*\*
-
-```bash
-
-pip install -r requirements.txt
-
-```
-
-
-
-\## Usage
-
-
-
-\*\*Run the monitoring dashboard:\*\*
-
-```bash
-
-python network\_monitor.py
-
-```
-
-
-
-The dashboard will display:
-
-\- Current system statistics (CPU, Memory)
-
-\- Network statistics (bytes sent/received, packets)
-
-\- Active network interfaces
-
-\- Top 5 active connections
-
-\- Top 10 running processes
-
-
-
-Updates occur every 5 seconds. Press `Ctrl+C` to stop.
-
-
-
-\## Project Structure
-
-
-
-```
-
-network-monitoring-dashboard/
-
-├── network\_monitor.py      # Main monitoring application
-
-├── requirements.txt        # Python dependencies
-
-├── README.md              # This file
-
-└── .gitignore            # Git ignore file
-
-```
-
-
-
-\## How It Works
-
-
-
-\### NetworkMonitor Class
-
-
-
-The `NetworkMonitor` class provides methods to:
-
-
-
-\- \*\*get\_network\_stats()\*\* - Returns current network I/O statistics
-
-\- \*\*get\_system\_stats()\*\* - Returns CPU and memory usage
-
-\- \*\*get\_active\_connections()\*\* - Lists established network connections
-
-\- \*\*get\_interface\_stats()\*\* - Retrieves network interface information
-
-\- \*\*get\_running\_processes()\*\* - Gets top processes by thread count
-
-\- \*\*collect\_metrics()\*\* - Gathers all metrics with timestamp
-
-\- \*\*get\_dashboard\_data()\*\* - Compiles complete dashboard data
-
-\- \*\*print\_dashboard()\*\* - Displays formatted dashboard output
-
-
-
-\### Data Collection
-
-
-
-The system collects metrics every 5 seconds and maintains a rolling history of the last 60 data points (5 minutes of data).
-
-
-
-\## Example Output
-
-
-
-```
-
-================================================================================
-
-NETWORK MONITORING DASHBOARD
-
-================================================================================
-
-Timestamp: 2025-01-15T10:30:45.123456
-
-
-
-SYSTEM STATISTICS
-
-CPU Usage: 25.5%
-
-Memory Usage: 45.2%
-
-Memory: 7.2GB / 16GB
-
-
-
-NETWORK STATISTICS
-
-Bytes Sent: 15.3 GB
-
-Bytes Received: 42.1 GB
-
-Packets Sent: 1250000
-
-Packets Received: 3500000
-
-
-
-NETWORK INTERFACES
-
-eth0: UP
-
-wlan0: UP
-
-lo: UP
-
-
-
-ACTIVE CONNECTIONS (Top 5)
-
-192.168.1.100:54321 → 8.8.8.8:443
-
-192.168.1.100:54322 → 142.250.185.46:443
-
-192.168.1.100:54323 → 1.1.1.1:53
-
-
-
-================================================================================
-
-```
-
-
-
-\## Use Cases
-
-
-
-\- \*\*Enterprise Network Administration\*\* - Monitor network health across systems
-
-\- \*\*Cybersecurity\*\* - Detect unusual network activity and connections
-
-\- \*\*System Troubleshooting\*\* - Diagnose performance issues
-
-\- \*\*Network Analysis\*\* - Analyze bandwidth usage and patterns
-
-\- \*\*Infrastructure Monitoring\*\* - Track system resources in real-time
-
-
-
-\## Future Enhancements
-
-
-
-\- \[ ] Web-based dashboard with Flask/Django
-
-\- \[ ] Real-time graphs and visualizations
-
-\- \[ ] Alert system for anomalies
-
-\- \[ ] Historical data export (CSV/JSON)
-
-\- \[ ] Network traffic analysis
-
-\- \[ ] Threat detection algorithms
-
-\- \[ ] Multi-system monitoring
-
-\- \[ ] Database integration for long-term storage
-
-
-
-\## Technologies Used
-
-
-
-\- \*\*Python 3\*\* - Core programming language
-
-\- \*\*psutil\*\* - System and network monitoring library
-
-\- \*\*Collections\*\* - Efficient data structure handling
-
-
-
-\## Performance
-
-
-
-\- Lightweight and efficient monitoring
-
-\- Minimal CPU overhead
-
-\- Works on Windows, macOS, and Linux
-
-\- Real-time updates with 5-second intervals
-
-
-
-\## Troubleshooting
-
-
-
-\*\*"Permission denied" errors:\*\*
-
-\- On Linux/macOS, you may need root privileges for some network stats
-
-\- Run with `sudo python network\_monitor.py`
-
-
-
-\*\*Missing psutil module:\*\*
-
-```bash
-
+# Install the only dependency
 pip install psutil
 
-```
+# Launch the dashboard
+python network_monitor.py
+Press Ctrl+C to stop the monitoring session.
 
+📦 Installation Options
+Standard Installation
+bash
+# Create and activate virtual environment (recommended)
+python -m venv venv
 
+# Windows
+venv\Scripts\activate
 
-\*\*No active connections showing:\*\*
+# macOS/Linux
+source venv/bin/activate
 
-\- Some systems may restrict access to connection data
+# Install requirements
+pip install -r requirements.txt
+Docker Support (Coming Soon)
+bash
+# Future enhancement: Docker deployment
+# docker build -t network-monitor .
+# docker run network-monitor
+🏗️ Architecture
+Project Structure
+text
+network-monitoring-dashboard/
+├── network_monitor.py      # Core monitoring application
+├── requirements.txt        # Dependency manifest
+├── README.md              # Documentation
+└── .gitignore            # Version control exclusions
+Core Components
+The NetworkMonitor class encapsulates all monitoring functionality:
 
-\- Try running with elevated privileges
+Method	Description
+get_network_stats()	Retrieves current network I/O statistics
+get_system_stats()	Captures CPU and memory utilization
+get_active_connections()	Lists established network connections
+get_interface_stats()	Enumerates network interfaces and status
+get_running_processes()	Identifies top processes by thread count
+collect_metrics()	Aggregates all metrics with timestamp
+get_dashboard_data()	Compiles complete dashboard dataset
+print_dashboard()	Renders formatted console output
+Data Flow
+Metrics collection every 5 seconds
 
+Historical buffer maintains 60 data points (5 minutes)
 
+Real-time dashboard updates with each collection cycle
 
-\## Contributing
+Thread-safe data structures ensure consistency
 
+💻 Usage Examples
+Basic Monitoring
+python
+from network_monitor import NetworkMonitor
 
+monitor = NetworkMonitor()
+dashboard_data = monitor.get_dashboard_data()
+monitor.print_dashboard()
+Programmatic Access
+python
+# Access individual metrics
+stats = monitor.collect_metrics()
+print(f"CPU: {stats['system']['cpu_percent']}%")
+print(f"Bytes Sent: {stats['network']['bytes_sent']}")
+Sample Output
+text
+================================================================================
+NETWORK MONITORING DASHBOARD
+================================================================================
+Timestamp: 2025-01-15T10:30:45.123456
 
-Feel free to fork and submit pull requests for improvements!
+SYSTEM STATISTICS
+CPU Usage: 25.5%
+Memory Usage: 45.2%
+Memory: 7.2GB / 16GB
 
+NETWORK STATISTICS
+Bytes Sent: 15.3 GB
+Bytes Received: 42.1 GB
+Packets Sent: 1,250,000
+Packets Received: 3,500,000
 
+NETWORK INTERFACES
+eth0: UP (MTU: 1500, Speed: 1000Mb/s)
+wlan0: UP (MTU: 1500, Speed: 433Mb/s)
+lo: UP (MTU: 65536)
 
-\## License
+ACTIVE CONNECTIONS (Top 5)
+192.168.1.100:54321 → 8.8.8.8:443 (ESTABLISHED)
+192.168.1.100:54322 → 142.250.185.46:443 (ESTABLISHED)
+192.168.1.100:54323 → 1.1.1.1:53 (ESTABLISHED)
 
+TOP PROCESSES (By Thread Count)
+1. chrome.exe (45 threads)
+2. python.exe (12 threads)
+3. explorer.exe (25 threads)
 
+================================================================================
+🔧 Advanced Configuration
+Custom Update Intervals
+Modify the collection frequency in network_monitor.py:
 
-This project is open source and available for educational and commercial use.
+python
+# Change from default 5 seconds
+UPDATE_INTERVAL = 10  # Update every 10 seconds
+Historical Buffer Size
+Adjust the number of retained data points:
 
+python
+# Change from default 60 points
+MAX_HISTORY = 120  # Keep 10 minutes of data (120 * 5 seconds)
+🛠️ Use Cases
+Network Administration
+Bandwidth Monitoring: Track usage patterns and identify bottlenecks
 
+Interface Health: Monitor link status and error rates
 
-\## Author
+Capacity Planning: Analyze trends for infrastructure scaling
 
+Security Operations
+Threat Detection: Identify unusual connection patterns
 
+Incident Response: Real-time visibility during security events
 
+Forensic Analysis: Historical data for post-incident investigation
+
+Development & Testing
+Application Profiling: Monitor network behavior of applications
+
+Performance Testing: Validate network efficiency under load
+
+Debugging: Identify connection issues during development
+
+⚠️ Troubleshooting
+Common Issues
+Problem	Solution
+Permission denied errors	Run with elevated privileges: sudo python network_monitor.py (Linux/macOS)
+Missing psutil module	Install dependency: pip install psutil
+No connections showing	Check firewall settings; run as administrator/root
+Inaccurate statistics	Verify network interface selection; check for virtualization overhead
+System Requirements
+Minimum: 512MB RAM, 100MB disk space
+
+Recommended: 2GB RAM, 500MB disk space
+
+Network: Read access to network interfaces
+
+🔮 Roadmap
+Version 1.1 (Q2 2025)
+Web-based dashboard using Flask
+
+Real-time visualization with Chart.js
+
+CSV/JSON data export
+
+Configurable alert thresholds
+
+Version 2.0 (Q4 2025)
+Multi-system distributed monitoring
+
+Machine learning-based anomaly detection
+
+PostgreSQL database integration
+
+REST API for data access
+
+Mobile-responsive web interface
+
+🤝 Contributing
+Contributions are welcome! Here's how you can help:
+
+Fork the repository
+
+Create a feature branch (git checkout -b feature/amazing-feature)
+
+Commit your changes (git commit -m 'Add amazing feature')
+
+Push to the branch (git push origin feature/amazing-feature)
+
+Open a Pull Request
+
+Please ensure your code follows PEP 8 standards and includes appropriate tests.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👨‍💻 Author
 Emmanuel Wakhongola
 
-\- GitHub: \[@WangilaWakhongola](https://github.com/WangilaWakhongola)
+GitHub: @WangilaWakhongola
 
-\- Email: wangilawakhongola@gmail.com
+Email: wangilawakhongola@gmail.com
 
+LinkedIn: Emmanuel Wakhongola
 
+🙏 Acknowledgments
+psutil - Cross-platform system monitoring library
 
-\## Contact
+Python Software Foundation - For the amazing language and ecosystem
 
+Open source community - For continuous inspiration and support
 
-
-For questions or issues, please open an issue on GitHub or contact me directly.
-
-
-
----
-
-
-
-\*\*Last Updated:\*\* January 2025
-
-\*\*Version:\*\* 1.0.0
-
+Version: 1.0.0 | Last Updated: January 2025 | Status: Active Development
