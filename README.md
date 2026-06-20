@@ -2,7 +2,6 @@ Network Monitoring Dashboard
 A real-time, enterprise-grade network monitoring system that tracks system performance, network statistics, and active connections with a 60-second historical data buffer.
 
 https://img.shields.io/badge/python-3.7%252B-blue
-https://img.shields.io/badge/platform-windows%2520%257C%2520macos%2520%257C%2520linux-lightgrey
 https://img.shields.io/badge/license-MIT-green
 
 📋 Overview
