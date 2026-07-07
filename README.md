@@ -55,25 +55,25 @@ pip install psutil
 python network_monitor.py
 Press Ctrl+C to stop the monitoring session.
 
-####📦 Installation Options
+### Installation Options
 Standard Installation
 bash
 # Create and activate virtual environment (recommended)
 python -m venv venv
 
-# Windows
+### Windows
 venv\Scripts\activate
 
-# macOS/Linux
+### macOS/Linux
 source venv/bin/activate
 
-# Install requirements
+### Install requirements
 pip install -r requirements.txt
 Docker Support (Coming Soon)
 bash
-# Future enhancement: Docker deployment
-# docker build -t network-monitor .
-# docker run network-monitor
+#### Future enhancement: Docker deployment
+#### docker build -t network-monitor .
+#### docker run network-monitor
 🏗️ Architecture
 Project Structure
 text
