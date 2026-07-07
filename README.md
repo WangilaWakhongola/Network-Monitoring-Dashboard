@@ -4,10 +4,10 @@ A real-time, enterprise-grade network monitoring system that tracks system perfo
 https://img.shields.io/badge/python-3.7%252B-blue<br/>
 https://img.shields.io/badge/license-MIT-green
 
-📋 Overview
+##📋 Overview
 This powerful monitoring tool provides comprehensive visibility into your system's network activity and resource utilization. Designed for both system administrators and security professionals, it delivers real-time insights with minimal overhead.
 
- Key Features
+ ### Key Features
 Network Monitoring
 Traffic Analysis: Track bytes sent/received in real-time
 
@@ -15,28 +15,28 @@ Packet Statistics: Monitor packet counts and error rates
 
 Interface Management: View all network interfaces with status, MTU, and speed
 
-System Performance
+### System Performance
 CPU Monitoring: Real-time usage percentage tracking
 
 Memory Analytics: Usage, availability, and utilization rates
 
 Process Management: Top processes by thread count and resource consumption
 
-Connection Tracking
+#### Connection Tracking
 Active Connections: Real-time display of established connections
 
 Address Resolution: Local and remote endpoint tracking
 
 Connection States: Monitor connection status and transitions
 
-Data Persistence
+### Data Persistence
 Historical Buffer: Maintains 60 seconds of time-series data
 
 Trend Analysis: Track metrics over time for pattern identification
 
 Rolling Updates: Continuous data collection with efficient memory usage
 
-🚀 Quick Start
+## 🚀 Quick Start
 Prerequisites
 Python 3.7 or higher
 
@@ -44,18 +44,18 @@ pip package manager
 
 One-Minute Setup
 bash
-# Clone the repository
+### Clone the repository
 git clone https://github.com/WangilaWakhongola/network-monitoring-dashboard.git
 cd network-monitoring-dashboard
 
-# Install the only dependency
+### Install the only dependency
 pip install psutil
 
-# Launch the dashboard
+### Launch the dashboard
 python network_monitor.py
 Press Ctrl+C to stop the monitoring session.
 
-📦 Installation Options
+####📦 Installation Options
 Standard Installation
 bash
 # Create and activate virtual environment (recommended)
