@@ -4,7 +4,7 @@ A real-time, enterprise-grade network monitoring system that tracks system perfo
 https://img.shields.io/badge/python-3.7%252B-blue<br/>
 https://img.shields.io/badge/license-MIT-green
 
-##📋 Overview
+## Overview
 This powerful monitoring tool provides comprehensive visibility into your system's network activity and resource utilization. Designed for both system administrators and security professionals, it delivers real-time insights with minimal overhead.
 
  ### Key Features
