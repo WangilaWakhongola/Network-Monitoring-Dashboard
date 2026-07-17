@@ -36,7 +36,7 @@ Trend Analysis: Track metrics over time for pattern identification
 
 Rolling Updates: Continuous data collection with efficient memory usage
 
-## 🚀 Quick Start
+##  Quick Start
 Prerequisites
 Python 3.7 or higher
 
